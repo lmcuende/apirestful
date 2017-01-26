@@ -15,7 +15,7 @@ exports.findAllTRCruds = function(req, res) {
 //GET - Return a TRCrud with specified ID
 exports.findById = function(req, res) {  
     TRCrud.findById(req.params.id, function(err, trcrud) {
-    if(err) return res.send(500. err.message);
+    if(err) return res.send(500, err.message);
 
     console.log('GET /trcrud/' + req.params.id);
         res.status(200).jsonp(trcrud);
