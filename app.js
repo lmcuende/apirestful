@@ -32,7 +32,9 @@ app.use(router);
 // DB Connection
 
 mongoose.connect('mongodb://localhost/trcruds', function(err, res) {  
-  if(err) throw err; 
+  if(err) {
+    console.log('ERROR: connecting to Database. ' + err);
+  }
   console.log('Connected to Database');
 });
 
